@@ -50,8 +50,11 @@ app.use(function (req, res, next) {
 app.use(connect.static(cwd));
 app.use(connect.directory(cwd));
 var port = process.argv[2] || 8080;
+var isOpenUrl = process.argv[3] || 'true';
 app.listen(port, function () {
   var url = "http://" + getIPAddress() + ":" + port;
   console.log("Running at " + url);
-  openURL(url);
+  if (isOpenUrl == 'true') {
+    openURL(url);
+  }
 });

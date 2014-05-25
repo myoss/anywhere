@@ -13,6 +13,8 @@ npm install anywhere -g
 anywhere
 // or with port
 anywhere 8000
+// or with port and does not automatically open the home page
+anywhere 8000 false
 ```
 ## Visit
 ```
